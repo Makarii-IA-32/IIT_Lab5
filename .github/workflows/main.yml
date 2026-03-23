@@ -22,7 +22,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Linter (Step 4)
-        # Перевірка синтаксичних помилок та невикористаних змінних
         run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
 
       - name: Login to Docker Hub
@@ -36,5 +35,4 @@ jobs:
         with:
           context: .
           push: true
-          # Замість 'flask-app' можеш вказати назву свого репозиторію на Docker Hub
           tags: ${{ secrets.DOCKER_USERNAME }}/flask-app:latest
