@@ -19,4 +19,4 @@ def get_hit_count():
 @app.route('/')
 def hello():
     count = get_hit_count()
-    return f'Кількість переглядів {count} разів.\n'
+    return f'Кількість завантажень сторінки: {count} разів.\n'
