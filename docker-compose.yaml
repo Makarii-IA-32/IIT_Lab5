@@ -11,4 +11,3 @@ services:
       - "8050:5000"
     depends_on:
       - redis_db
-
